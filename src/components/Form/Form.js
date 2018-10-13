@@ -8,7 +8,7 @@ const Form = props => (
   <>
     <form className={ classes.Form } onSubmit={ props.onSubmit }>
       <Input type='text' name='todoText' value={ props.todoText } onChange={ (e) => props.fillField(e) } />
-      <Button type='submit' label='Salvar' classActive='ButtonForm' />
+      <Button type='submit' label='Add' classActive='ButtonForm' />
     </form>
   </>
 );
