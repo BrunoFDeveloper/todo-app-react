@@ -1,0 +1,16 @@
+.ContentTodoItem {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 35px;
+
+  p {
+    text-decoration: underline;
+    width: 80%;
+    margin: 0;
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+  }
+}
