@@ -5,8 +5,8 @@ const initialState = {
   todos: []
 };
 
-const reducer = (state = initialState, { type, payload }) => {
-  switch (type) {
+const reducer = ( state = initialState, { type, payload } ) => {
+  switch ( type ) {
     case actionTypes.WRITE_TODO:
       return {
         ...state,
@@ -23,13 +23,14 @@ const reducer = (state = initialState, { type, payload }) => {
 
       return {
         ...state,
-        todos: state.todos.concat(todo),
+        todos: state.todos.concat( todo ),
         todoText: ''
       }
     case actionTypes.TOGGLE_TODO_DONE:
 
-      let todosCopy = [ ...state.todos ];
-      let newTodo = todosCopy.find(item => item.id === payload.id);
+      let todosCopy = [ ...state.todos ],
+        newTodo = todosCopy.find( item => item.id === payload.id );
+
       newTodo.isDone = !newTodo.isDone;
 
       return {
@@ -39,7 +40,7 @@ const reducer = (state = initialState, { type, payload }) => {
     case actionTypes.REMOVE_TODO:
       return {
         ...state,
-        todos: state.todos.filter(item => item.id !== payload.id)
+        todos: state.todos.filter( item => item.id !== payload.id )
       }
     default:
       return state;
